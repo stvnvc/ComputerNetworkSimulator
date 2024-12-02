@@ -9,12 +9,8 @@ namespace Domain.Models
 {
     public class Ruter : Uredjaj
     {
-        
-
         public int MaksBrzPrenosaPodataka { get; set; }
-
         public int BrojLANPrikljucaka { get; set; }
-
         public TipVrstaRutera VrstaRutera { get; set; }
 
         public Ruter() { }
