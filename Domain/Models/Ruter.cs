@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Domain.Models
 {
-    public class Ruter
+    public class Ruter : Uredjaj
     {
-        public string SerijskiBroj { get; set; } = string.Empty;
+        
 
         public int MaksBrzPrenosaPodataka { get; set; }
 
@@ -19,9 +19,9 @@ namespace Domain.Models
 
         public Ruter() { }
 
-        public Ruter(string serijskiBroj, int maksBrzPrenosaPodataka, int brojLANPrikljucaka, TipVrstaRutera vrstaRutera)
+        public Ruter(string serijskiBroj, int maksBrzPrenosaPodataka, int brojLANPrikljucaka, TipVrstaRutera vrstaRutera) 
+            : base(serijskiBroj)
         {
-            SerijskiBroj = serijskiBroj;
             MaksBrzPrenosaPodataka = maksBrzPrenosaPodataka;
             BrojLANPrikljucaka = brojLANPrikljucaka;
             VrstaRutera = vrstaRutera;
@@ -29,10 +29,10 @@ namespace Domain.Models
 
         public override string ToString()
         {
-            return $"Ruter {SerijskiBroj}, Brzina: {MaksBrzPrenosaPodataka} Mbps, LAN priključci: {BrojLANPrikljucaka}, Tip: {VrstaRutera}";
+            return "\nRuter:" + base.ToString() + 
+                $"\nBrzina: {MaksBrzPrenosaPodataka} Mbps" +
+                $"\nLAN priključci: {BrojLANPrikljucaka}" + 
+                $"\nTip: {VrstaRutera}";
         }
-
-
     }
-
 }
