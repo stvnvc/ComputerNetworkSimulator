@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "NooYyoTiqq0=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\HP\\Source\\Repos\\ers_E02_tim_05\\Presentation\\Presentation.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.6\\microsoft.extensions.dependencyinjection.9.0.6.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.6\\microsoft.extensions.dependencyinjection.abstractions.9.0.6.nupkg.sha512"
+  ],
+  "logs": []
+}

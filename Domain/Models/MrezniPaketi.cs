@@ -11,9 +11,14 @@ namespace Domain.Models
     {
         public TipMreznogProtokola MrezniProtokol { get; set; }
         public int VelicinaZaglavlja { get; set; }
-        public int VelicinaPodataka { get; set; }
+        = -1;
+        public int VelicinaPodataka { get; set; } = -1;
+
         public string SadrzajPaketa { get; set; } = string.Empty;
+
         public string IPAdresaPrimaoca { get; set; } = string.Empty;
+
+        public DateTime VremePrijema { get; set; }
 
         public MrezniPaket() { }
 
@@ -32,7 +37,8 @@ namespace Domain.Models
             $"\nZaglavlje: {VelicinaZaglavlja} bajtova" +
             $"\nPodaci: {VelicinaPodataka} bajtova" +
             $"\nSadržaj: {SadrzajPaketa}" +
-            $"\nIP Primaoca: {IPAdresaPrimaoca}";
+            $"\nIP Primaoca: {IPAdresaPrimaoca}" +
+            $"\nVrme prijema: {VremePrijema}";
         }
     }
 }

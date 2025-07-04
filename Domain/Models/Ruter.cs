@@ -7,17 +7,23 @@ using System.Threading.Tasks;
 
 namespace Domain.Models
 {
-    public class Ruter : Uredjaj
+    public class Ruter
     {
+        public string SerijskiBrojProizvodjaca { get; set; } = string.Empty;
+        
         public int MaksBrzPrenosaPodataka { get; set; }
+        
         public int BrojLANPrikljucaka { get; set; }
+        
         public TipVrstaRutera VrstaRutera { get; set; }
+
+        public int BrojPrimljenihPaketa { get; set; } = 0;
 
         public Ruter() { }
 
-        public Ruter(string serijskiBroj, int maksBrzPrenosaPodataka, int brojLANPrikljucaka, TipVrstaRutera vrstaRutera) 
-            : base(serijskiBroj)
+        public Ruter(string serijskiBroj, int maksBrzPrenosaPodataka, int brojLANPrikljucaka, TipVrstaRutera vrstaRutera)
         {
+            SerijskiBrojProizvodjaca = serijskiBroj;
             MaksBrzPrenosaPodataka = maksBrzPrenosaPodataka;
             BrojLANPrikljucaka = brojLANPrikljucaka;
             VrstaRutera = vrstaRutera;
@@ -25,10 +31,12 @@ namespace Domain.Models
 
         public override string ToString()
         {
-            return "\nRuter:" + base.ToString() + 
+            return "\nRuter:" + 
+                $"\nSerijski Broj proizvodjaca: {SerijskiBrojProizvodjaca}"+ 
                 $"\nBrzina: {MaksBrzPrenosaPodataka} Mbps" +
                 $"\nLAN priključci: {BrojLANPrikljucaka}" + 
-                $"\nTip: {VrstaRutera}";
+                $"\nTip: {VrstaRutera}" +
+                $"\nBroj primljenih paketa: {BrojPrimljenihPaketa}";
         }
     }
 }
