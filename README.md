@@ -1,1 +1,1 @@
-Computer Network Simulator
+University project - Computer Network Simulator
